@@ -58,4 +58,10 @@ alias mooseit='$path/to/moose/porous/flow/executable/porous_flow-opt -i'
 With an alias set, you can easily run a model (e.g. the mesh generation) from your command line by typing:  
 ```bash
 $ mooseit pct_voxel_mesh.i --mesh-only
-```
+```  
+
+### Result
+
+If the mesh generation was successful, you will get a file with a `.e` ending (e.g. pct_voxel_mesh_in.e). This file contains the MOOSE-mesh you can use for simulations. In my example here, it looks like this:  
+
+![pct_mesh](https://raw.githubusercontent.com/Japhiolite/a-Moose-and-you/master/imgs/model_mesh.png)
