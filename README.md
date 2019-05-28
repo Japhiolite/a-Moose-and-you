@@ -16,3 +16,9 @@ This means, that steps like installation will not be covered here. And honestly,
 ## Where to start  
 
 When starting using MOOSE, there are different sources, depending what you use MOOSE for. As a general starting guide, the [examples](https://www.mooseframework.org/examples/) provide a wide range of different applications. There also exists a dedicated [tutorial](https://www.mooseframework.org/modules/porous_flow/tutorial_00.html) specifically for the Porous Flow Module, which covers different applications using this module.
+
+## Contents
+
+* [Generate a mesh](content/makemesh.md)  
+* [Set up a model](content/inputfiles.md)  
+* [Run a model](content/runmodel.md)
