@@ -41,7 +41,40 @@ A typical input file for mesh generation of a geological structure from a differ
 ```
 
 Note, that for some software, there will be a difference in coordinate system (i.e. which dimension is `x`, `y`, or `z`) between the geological modelling software and MOOSE.  
-For instance, between GemPy and MOOSE, `x` and `z` axes are switched. See the example input file `pct_voxel_mesh.i` as an example.  
+For instance, between GemPy and MOOSE, `x` and `z` axes are switched. See the example input file `pct_voxel_mesh.i` as an example. A more detailed description is given in section [GemPy 2 MOOSE](content/GemPy2Moose.md).
+
+**Note:**  
+Since a recent update in MOOSE, the syntax for a mesh-generation input file changed. The **new** syntax is:  
+
+```python
+[MeshGenerators]
+    [./gmg]
+      type = GeneratedMeshGenerator
+      dim = 3
+      nx = 50
+      ny = 50
+      nz = 50
+      xmin = 0.0
+      xmax = 2000.0
+      yim = 0.0
+      ymax = 2000.0
+      zmin = 0.0
+      zmax = 2000.0
+      block_id = '1 2 3 4 5 6'
+      block_name = 'Main_Fault Sandstone_2 Siltstone Shale Sandstone_1 basement'
+    [../]
+
+    [./subdomains]
+      type = ElementSubdomainIDGenerator
+      input = gmg
+      subdomain_ids = ' ' # here you paste the transformed block_id vector
+    [../]
+[]
+
+[Mesh]
+  type = MeshGeneratorMesh
+[]
+````
 
 ### Generate the mesh
 

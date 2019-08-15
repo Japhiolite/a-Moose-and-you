@@ -22,3 +22,4 @@ When starting using MOOSE, there are different sources, depending what you use M
 * [Generate a mesh](content/makemesh.md)  
 * [Set up a model](content/inputfiles.md)  
 * [Run a model](content/runmodel.md)
+* [GemPy 2 MOOSE](content/GemPy2Moose.md)

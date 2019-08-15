@@ -3,7 +3,7 @@
 This notebook briefly describes how to export a discretized geological model from [GemPy](https://github.com/cgre-aachen/gempy), so that it is directly usable by MOOSE. For this, we use the example model presented in [GemPy tutorial chapter 1, 1-1 Basics](https://nbviewer.jupyter.org/github/cgre-aachen/gempy/blob/master/notebooks/tutorials/ch1-1_Basics.ipynb). This model consists of five stratigraphic units (including the Basement, a default unit created by GemPy), which are folded and faulted after deposition.
 The figure below shows a vertical cross-section through the geological voxel-model (i.e. spatially discretized) created by GemPy. This information is stored in a variable called `lith_block`, a 1D array. Assume that the GemPy model is called `geo_model`, then `lith_block` can be accessed via `geo_model.solutions.lith_block`.  
 
-![gempy_fig]()
+![gempy_fig](https://raw.githubusercontent.com/Japhiolite/a-Moose-and-you/master/imgs/GemPy_model_1.png)
 
 ## Method for exporting the voxel-model  
 
@@ -142,3 +142,7 @@ Once the geological model is integrated in the mesh for MOOSE, we can set up a h
 ```
 
 Once we successfully completed the simulation (in this case heat diffusion), we have a temperature model corresponding to the geological model built with GemPy.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Japhiolite/a-Moose-and-you/master/imgs/GemPy_model_Moose_temperature.png" alt="drawing" width="500"/>
+</p> 
