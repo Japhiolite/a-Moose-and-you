@@ -144,5 +144,5 @@ Once the geological model is integrated in the mesh for MOOSE, we can set up a h
 Once we successfully completed the simulation (in this case heat diffusion), we have a temperature model corresponding to the geological model built with GemPy.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Japhiolite/a-Moose-and-you/master/imgs/GemPy_model_Moose_temperature.png" alt="drawing" width="500"/>
-</p> 
+    <img src="https://raw.githubusercontent.com/Japhiolite/a-Moose-and-you/master/imgs/GemPy_model_Moose_temperature.png" alt="drawing" width="800"/>
+</p>

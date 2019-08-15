@@ -82,17 +82,21 @@ What's left is how to create the meshed model file for MOOSE. This is done by ru
 
 ```bash
 $path_to_moose/moose/modules/porous_flow/porous_flow-opt -i pct_voxel_mesh.i --mesh-only
-```  
+```
+
 **Tip**:  
 add the path to the executable `porous_flow_opt` to your `.bashrc` (`.bash_profile` on a MAC) as an `alias`, so you just have to type the alias for running a MOOSE model.  
+
 ```bash
 alias mooseit='$path/to/moose/porous/flow/executable/porous_flow-opt -i'
-```  
+```
+
 *Note*, replace `$path/to/moose/porous/flow/executable/` with your path. To get the Path, navigate to your `porous_flow-opt` executable and type `pwd`. The string given by the command line is your current path.  
 
 With an alias set, you can easily run a model (e.g. the mesh generation) from your command line by typing:  
+
 ```bash
-$ mooseit pct_voxel_mesh.i --mesh-only
+mooseit pct_voxel_mesh.i --mesh-only
 ```  
 
 ### Result
