@@ -15,7 +15,7 @@ In the following, we go through a conductive temperature simulation of the struc
 
 We generated the grid beforehand, but actually, we ran a MOOSE simulation where only the grid was generated. Because this can be the case: you build your grid at the beginning of a simulation. With complicated geometries in geological simulations however, this is not reasonable. So instead of generating a mesh, we can specify the file containing the grid:  
 
-```c++
+```python
 [Mesh]
   file = output_of_mesh_generation.e
 []
